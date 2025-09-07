@@ -71,11 +71,14 @@ for match in recommend_products(converted_products, customer_preferences_set):
         print(f"- {match['name']} ({match['match_count']} match(es))")
 
 
-# DESIGN MEMO (write below in a comment):
+''' DESIGN MEMO (write below in a comment):
 # 1. What core operations did you use (e.g., intersections, loops)? Why?
-    # I used loops to iterate over the products and customer preferences, and set intersections to find matching tags. 
-    # Loops are essential for processing each item in a list, while set intersections provide an efficient way to identify common elements between two sets.
+     I used loops to iterate over the products and customer preferences, and set intersections to find matching tags. 
+     Loops are essential for processing each item in a list, while set intersections provide an efficient way to identify common elements between two sets.
+     I also used functions to encapsulate the logic for counting matches and recommending products, which improves code organization and reusability.
+     Another core operation was sorting the matches based on the number of matches, which helps prioritize products that align closely with customer preferences.
 # 2. How might this code change if you had 1000+ products?
-    # If there were 1000+ products, I would consider optimizing the data structure for faster lookups, such as using a database or indexing system. 
-    # Additionally, I might implement caching mechanisms to store frequently accessed recommendations and reduce computation time.
-    # I would also consider limiting the number of recommendations returned to the user to improve performance and user experience.
+     If there were 1000+ products, I would consider optimizing the data structure for faster lookups, such as using a database or indexing system. 
+     Additionally, I might implement caching mechanisms to store frequently accessed recommendations and reduce computation time.
+     I would also consider limiting the number of recommendations returned to the user to improve performance and user experience.
+     Another approach could be to implement pagination or lazy loading to handle large datasets more efficiently.'''
